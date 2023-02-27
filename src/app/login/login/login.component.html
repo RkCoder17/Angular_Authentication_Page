@@ -1,0 +1,63 @@
+<!-- LOGIN FORM STARTS -->
+
+<form [formGroup]="loginForm" class="border p-3 rounded bg-warning" >
+
+    <!-- LOGIN HEADING -->
+
+    <div class="row g-0">
+
+        <div class="col text-center p-2 mb-3 ">
+            <h3 class="fs-3 text-light">Login</h3>
+        </div>
+            
+    </div>
+
+    <!-- Email -->
+
+    <div class="row">
+        <div class="col mb-3">
+            <label for="email" class="form-label text-light">E-Mail Address</label>
+             <input type="text" class="form-control" id="email" formControlName="emaill">
+             <span style="color:red" *ngIf="emaill && emaill.invalid && emaill.touched">Enter Valid E-Mail Address</span>
+           </div>
+    </div>
+
+    <!-- Password and Confirm Password -->
+    
+    <div class="row">
+
+        <div class="col mb-3">
+            <label for="pwd" class="form-label text-light">Password</label>
+            <input type="password" class="form-control" id="password" formControlName="pwds">
+            <span style="color:red" *ngIf="pwds && pwds.invalid && pwds.touched">Enter Valid Password</span><br>
+        </div>
+
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+
+    <div class="row">
+        <div class="col-6 offset-5 mb-1">
+            <div class="d-grid">
+                <button type="submit" (click)="loginSubmit()" class="btn btn-light" [disabled]="loginForm.invalid"><b>Submit</b></button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<!-- REGISTER BUTTON -->
+
+<div class="text-center mt-3" style="margin-left:-14.5rem">
+    <div class="row">
+        <div class="col-6 offset-5 mb-1">
+            <div class="d-grid">
+
+                <a routerLink="/register" class="btn btn-primary text-light"><b>New User</b></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a routerLink="lazyloading2">LazyLoading</a>
+<router-outlet></router-outlet>
