@@ -1,0 +1,63 @@
+<!-- LOGIN FORM STARTS -->
+
+<form class="border p-3 rounded bg-primary">
+
+    <!-- LOGIN HEADING -->
+
+    <div class="row g-0">
+
+        <div class="col text-center p-2 mb-3 ">
+            <h3 class="fs-3 text-light">Login</h3>
+        </div>
+            
+    </div>
+
+    <!-- Email -->
+
+    <div class="row">
+
+        <div class="col mb-3">
+            <label for="email" class="form-label text-light">E-Mail Address</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+
+    </div>
+
+    <!-- Password and Confirm Password -->
+    
+    <div class="row">
+
+        <div class="col mb-3">
+            <label for="pwd" class="form-label text-light">Password</label>
+            <input type="password" class="form-control" id="password">
+        </div>
+
+    </div>
+
+    <!-- SUBMIT BUTTON -->
+
+    <div class="row">
+        <div class="col-6 offset-5 mb-1">
+            <div class="d-grid">
+                <button type="submit" class="btn btn-light"><b>Submit</b></button>
+            </div>
+        </div>
+    </div>
+
+</form>
+
+<!-- REGISTER BUTTON -->
+
+<div class="text-center mt-3" style="margin-left:-14.5rem">
+    <div class="row">
+        <div class="col-6 offset-5 mb-1">
+            <div class="d-grid">
+
+                <a routerLink="/register" class="btn btn-primary text-light"><b>New User</b></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a routerLink="lazyloading2">LazyLoading</a>
+<router-outlet></router-outlet>
